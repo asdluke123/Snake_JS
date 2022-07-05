@@ -7,3 +7,6 @@
 
 ## How to get started 
 ### To play my rendtion of snake got to my website **here** [Link](http://www.LukeRobinson.com)*not made yet* or if you want to view my code and how I actually created my rendtion go ahead and clone it down 
+
+## Credits
+### [Link](https://www.educative.io/blog/javascript-snake-game-tutorial)-Helped me understad the logic of moving the snake 
