@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.other{
+    background-color: white;
+}
+#scoreBoard{
+    display: flex;
+}
+.theScores{
+    margin-right: 50px;
+    margin-left:50px
+}
+h2,h3{
+    color: white;
+}
+button{
+    border: 3px white solid;
+    color: black;
+}
+h3{
+    text-align: center;
+}
+#board{
+    width: 800px;
+    height:600px;
+    border: white solid 2px;
+    box-shadow:  20px 20px 10px white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.apple{
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.snake{
+    background-color: rgb(57, 93, 160);
+}
+.head{
+    background-color: rgb(51, 76, 95);
+}
+#board div{
+    margin: 0;
+    width: 40px;
+    height: 40px;
+}
+button{
+    margin-top: 80px;
+}
