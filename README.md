@@ -1,12 +1,12 @@
 # My Rendition of Everyones Faviorite Game-Snake 
 
 ## Description 
-### This is my rendetion of creating the popular online game Snake!! I played it all the time as a kid always trying to beat my high-score and always wondered how this game was made. SO for my first project at bootcamp I knew I had to try and recreate snake.You can start the game by clicking the Start Game button.I was able to make my rendition of Snake within a week after learning Javascript in-depth for a week.###
+### This is my rendetion of creating the popular online game Snake!! I played it all the time as a kid always trying to beat my high-score and always wondered how this game was made. SO for my first project at bootcamp I knew I had to try and recreate snake.I was able to make my rendition of Snake within a week after learning Javascript in-depth for a week.###
 
 
 
 ## How to get started 
-### To play my rendtion of snake got to my website **here** [Link](LukeRobinsonProject1.surge.sh) or if you want to view my code and how I actually created my rendtion go ahead and clone it down 
+### To play my rendtion of snake got to my website [Link](LukeRobinsonProject1.surge.sh).This will redirect you to my project website with instructions on how to play the game and if you click on the Snake JavaScript Image to redirect you to the game website. You can also clone this repo to see how I made the game.
 
 ## Credits
 ### [Link](https://www.educative.io/blog/javascript-snake-game-tutorial)-Helped me understad the logic of moving the snake 
