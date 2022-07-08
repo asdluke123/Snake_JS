@@ -10,7 +10,7 @@ const token = {
     onGoing : 0
 }
 let boardList = [];//array to hold divs of board
-let x = 500//speed interval 
+let x = 400//speed interval 
 
 //function to create my board based on the value of total
 const makeBoard = () =>{   
@@ -28,7 +28,6 @@ const main = () =>{
     token.onGoing = 1
     token.snake.forEach((e) =>{
       boardList[e].classList.add('snake');
-      
     })
      boardList[token.snake[0]].classList.add('head');
     placeApple()
@@ -38,13 +37,18 @@ const main = () =>{
 
 const runGame = () =>{
   //Checks for any collions to walls or if the snake runs into itself
-  if ((token.snake[0] + 20 >= (20 * 20) && token.whichWay === 20 ) || (token.snake[0] % 20 === 20 -1 && token.whichWay === 1) || (token.snake[0] % 20 === 0 && token.whichWay === -1) || (token.snake[0] - 20 < 0 && token.whichWay === -20) ||  (boardList[token.snake[0] + token.whichWay].className === 'snake') //if snake goes into itself
+  if ((token.snake[0] + 20 >= (30 * 10) && token.whichWay === 20 )
+  || (token.snake[0] % 20 === 20 -1 && token.whichWay === 1) 
+  || (token.snake[0] % 20 === 0 && token.whichWay === -1) 
+  || (token.snake[0] - 20 < 0 && token.whichWay === -20) 
+  || boardList[token.snake[0] + token.whichWay].classList.contains('snake')  //if snake goes into itself
   ) {
-      token.onGoing = 0;
       if(token.score > token.topScore){
         token.topScore = token.score;
         document.getElementById('topScore').innerText = token.score
       }
+      token.onGoing = 0;
+      document.getElementById('gameOver').innerText = 'Game Over'
       return clearInterval(token.x);
    }
   moveSnake()
@@ -52,6 +56,7 @@ const runGame = () =>{
 
 //Function to move the snake to a div based on the value of direction 
 const moveSnake = () => {
+
   let oldTail =  token.snake.pop()//pops the last value in the snake array and gives it to oldTail variable
   boardList[oldTail].classList.remove('snake')//removes the snake class at the oldTail's location on the board
   token.snake.unshift(token.snake[0]+ token.whichWay)//Adds a new head to the snake at the value of the old head plus what the value of whichWay equals
@@ -69,8 +74,7 @@ const addSnake = (oldTail) =>{
   token.snake.push(oldTail)
   token.score++
   token.objectScore =  document.getElementById('score')
-  token.objectScore.innerText = token.score;
-  console.log(token.score)  
+  token.objectScore.innerText = token.score; 
 }
 //Places a apple on the board at random where the board dosen't have a snake value
 const placeApple = () =>{
@@ -87,16 +91,21 @@ const placeApple = () =>{
 //Resets the game to be able to run smoothly again
 const resetGame = () =>{
   if(token.onGoing === 0){
+  document.getElementById('gameOver').innerText = ''
   token.snake = [2,1,0]
   token.score = 0;
-  token.objectScore.innerText = token.score
+  if(token.score != 0){
+    token.objectScore.innerText = token.score}
   token.whichWay = 1;
-  x = 500
+  x = 400
   boardList.forEach((e)=>{
     if(e.classList.contains('snake')){
         e.classList.remove('snake')}
     if(e.classList.contains('apple')){
         e.classList.remove('apple')}
+    if(e.classList.contains('head')){
+        e.classList.remove('head')
+    }
     })
   }
 }
@@ -105,14 +114,13 @@ token.button.addEventListener('click',resetGame)
 token.button.addEventListener('click',main)
 //Event listner to trigger when user presses a arrow key
 document.onkeydown = (e) => {
-
-  if (e.keyCode === 38) {
+  if (e.keyCode === 38) {//Up arrow
       token.whichWay = -20
-  } else if (e.keyCode === 40) {
+  } else if (e.keyCode === 40) {//Down arrow
     token.whichWay = +20
-  } else if (e.keyCode === 37) {
+  } else if (e.keyCode === 37) {//Left arrow
     token.whichWay = -1
-  } else if (e.keyCode === 39) {
+  } else if (e.keyCode === 39) {//Right arrow
     token.whichWay = 1
   }
 }
