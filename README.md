@@ -6,7 +6,9 @@
 
 
 ## How to get started 
-### To play my rendtion of snake got to my website **here** [Link](LukeRobinsonProject1.surge.sh)*not made yet* or if you want to view my code and how I actually created my rendtion go ahead and clone it down 
+### To play my rendtion of snake got to my website **here** [Link](LukeRobinsonProject1.surge.sh) or if you want to view my code and how I actually created my rendtion go ahead and clone it down 
 
 ## Credits
 ### [Link](https://www.educative.io/blog/javascript-snake-game-tutorial)-Helped me understad the logic of moving the snake 
+### [Link](https://blog.hubspot.com/website/css-fade-in#:~:text=In%20the%20CSS%2C%20use%20the,creates%20the%20fade%2Din%20effect.)-Fade animation for buttons and image
+### [Link](https://www.w3schools.com/howto/howto_css_image_text.asp)-Helped me position Game Over text

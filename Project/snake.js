@@ -11,7 +11,6 @@ const token = {
 }
 let boardList = [];//array to hold divs of board
 let x = 400//speed interval 
-
 //function to create my board based on the value of total
 const makeBoard = () =>{   
   let total = 30 * 10
@@ -32,16 +31,12 @@ const main = () =>{
      boardList[token.snake[0]].classList.add('head');
     placeApple()
     token.x = setInterval(runGame,x)
-}
+  }
 }
 
 const runGame = () =>{
   //Checks for any collions to walls or if the snake runs into itself
-  if ((token.snake[0] + 20 >= (30 * 10) && token.whichWay === 20 )
-  || (token.snake[0] % 20 === 20 -1 && token.whichWay === 1) 
-  || (token.snake[0] % 20 === 0 && token.whichWay === -1) 
-  || (token.snake[0] - 20 < 0 && token.whichWay === -20) 
-  || boardList[token.snake[0] + token.whichWay].classList.contains('snake')  //if snake goes into itself
+  if ((token.snake[0] + 20 >= (30 * 10) && token.whichWay === 20 )|| (token.snake[0] % 20 === 20 -1 && token.whichWay === 1) || (token.snake[0] % 20 === 0 && token.whichWay === -1) || (token.snake[0] - 20 < 0 && token.whichWay === -20) || boardList[token.snake[0] + token.whichWay].classList.contains('snake')  //if snake goes into itself
   ) {
       if(token.score > token.topScore){
         token.topScore = token.score;
@@ -56,7 +51,6 @@ const runGame = () =>{
 
 //Function to move the snake to a div based on the value of direction 
 const moveSnake = () => {
-
   let oldTail =  token.snake.pop()//pops the last value in the snake array and gives it to oldTail variable
   boardList[oldTail].classList.remove('snake')//removes the snake class at the oldTail's location on the board
   token.snake.unshift(token.snake[0]+ token.whichWay)//Adds a new head to the snake at the value of the old head plus what the value of whichWay equals
@@ -109,7 +103,6 @@ const resetGame = () =>{
     })
   }
 }
-
 makeBoard()
 token.button.addEventListener('click',resetGame)
 token.button.addEventListener('click',main)
