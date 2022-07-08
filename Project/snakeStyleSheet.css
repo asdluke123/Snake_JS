@@ -53,7 +53,7 @@ h3{
     flex-wrap: wrap;
 }
 .apple{
-    border-radius: 50%;
+    border-radius: 75%;
     background-color: rgb(255, 255, 255);
 }
 .snake{
