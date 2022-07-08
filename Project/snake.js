@@ -33,10 +33,13 @@ const main = () =>{
     token.x = setInterval(runGame,x)
   }
 }
-
 const runGame = () =>{
   //Checks for any collions to walls or if the snake runs into itself
-  if ((token.snake[0] + 20 >= (30 * 10) && token.whichWay === 20 )|| (token.snake[0] % 20 === 20 -1 && token.whichWay === 1) || (token.snake[0] % 20 === 0 && token.whichWay === -1) || (token.snake[0] - 20 < 0 && token.whichWay === -20) || boardList[token.snake[0] + token.whichWay].classList.contains('snake')  //if snake goes into itself
+  if ((token.snake[0] + 20 >= (30 * 10) && token.whichWay === 20)//If the div at snake[0] + 10 divs from where it is is greater then the total area of the board AND whichWay equals 20 enter if
+  || (token.snake[0] % 20 === 20 -1 && token.whichWay === 1)//if there is a remainder of 1 and whichWay equals 1 enter if 
+  || (token.snake[0] % 20 === 0 && token.whichWay === -1) //if there is not remainder and whichWay equals -1 enter if
+  || (token.snake[0] - 20 < 0 && token.whichWay === -20) //if the div at snake[0] - 20 from where it is equals 0 and whichWay equals -20 enter if
+  || boardList[token.snake[0] + token.whichWay].classList.contains('snake')  //if the head of the snake goes over a div where class equals head enter if
   ) {
       if(token.score > token.topScore){
         token.topScore = token.score;
@@ -48,7 +51,6 @@ const runGame = () =>{
    }
   moveSnake()
 }
-
 //Function to move the snake to a div based on the value of direction 
 const moveSnake = () => {
   let oldTail =  token.snake.pop()//pops the last value in the snake array and gives it to oldTail variable
@@ -109,12 +111,12 @@ token.button.addEventListener('click',main)
 //Event listner to trigger when user presses a arrow key
 document.onkeydown = (e) => {
   if (e.keyCode === 38) {//Up arrow
-      token.whichWay = -20
+      token.whichWay = -20//makes whichWay equal -20 and the snake goes up 10 divs from where it is
   } else if (e.keyCode === 40) {//Down arrow
-    token.whichWay = +20
+    token.whichWay = +20 //makes whichWay equal 20 and the snake goes down 10 divs from where it is
   } else if (e.keyCode === 37) {//Left arrow
-    token.whichWay = -1
+    token.whichWay = -1 //makes whichWay equal -1 and makes the snake go left
   } else if (e.keyCode === 39) {//Right arrow
-    token.whichWay = 1
+    token.whichWay = 1 //makes whichWay equal 1 and makes the snake go right
   }
 }

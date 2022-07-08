@@ -48,7 +48,7 @@ h3{
 #board{
     width: 800px;
     height:600px;
-    border: white solid 2px;
+    border: white solid 3px;
     display: flex;
     flex-wrap: wrap;
 }
