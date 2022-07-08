@@ -6,7 +6,7 @@
 
 
 ## How to get started 
-### To play my rendtion of snake got to my [website](LukeRobinsonProject1.surge.sh).This will redirect you to my project website with instructions on how to play the game and if you click on the Snake JavaScript Image to redirect you to the game website. You can also clone this repo to see how I made the game.
+### To play my rendtion of snake got to my [website](https://lukerobinsonproject1.surge.sh/index.html).This will redirect you to my project website with instructions on how to play the game and if you click on the Snake JavaScript Image to redirect you to the game website. You can also clone this repo to see how I made the game.
 
 ## Credits
 ### [Link](https://www.educative.io/blog/javascript-snake-game-tutorial)-Helped me understad the logic of moving the snake 
