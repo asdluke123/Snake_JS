@@ -7,6 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 header{
     width: 100vw;
@@ -40,10 +41,11 @@ img:hover{
     0%{opacity: 40%;}
     100%{opacity: 100%;}
 }
-div{
+#instructions{
     display: flex;
     align-items: center;
     text-align: center;
     width: 20vw;
     font-weight: 600;
+    font-size: 1.8em; 
 }
