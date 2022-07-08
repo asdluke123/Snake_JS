@@ -109,6 +109,7 @@ const resetGame = () =>{
     })
   }
 }
+
 makeBoard()
 token.button.addEventListener('click',resetGame)
 token.button.addEventListener('click',main)
