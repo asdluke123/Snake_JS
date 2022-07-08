@@ -10,7 +10,7 @@ const token = {
     onGoing : 0
 }
 let boardList = [];//array to hold divs of board
-let x = 400//speed interval 
+let x = 500//speed interval 
 //function to create my board based on the value of total
 const makeBoard = () =>{   
   let total = 30 * 10
@@ -91,7 +91,7 @@ const resetGame = () =>{
   if(token.score != 0){
     token.objectScore.innerText = token.score}
   token.whichWay = 1;
-  x = 400
+  x = 500
   boardList.forEach((e)=>{
     if(e.classList.contains('snake')){
         e.classList.remove('snake')}
